@@ -26,7 +26,7 @@ const updateExpenseSchema = z.object({
 export const expensesRoute = new Hono()
   .get('/', async (c) => {
     const rows = await db.select().from(expenses)
-    return ok(c,{ expense: rows })
+    return c.json({ expenses: rows })
   })
 
   // GET /api/expenses/:id → single item

@@ -1,21 +1,15 @@
-
+import { AddExpenseForm } from './components/AddExpenseForm'
+import { ExpensesList } from './components/ExpensesList'
 import { AppCard } from './components/AppCard'
-import { ThemeToggle } from './components/themeToggle'
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+    <main className="min-h-screen bg-gray-50 text-gray-900">
       <div className="mx-auto max-w-3xl p-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold">COMP3330 – Frontend Setup</h1>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              Vite • React • Tailwind • ShadCN
-            </p>
-          </div>
-          <ThemeToggle />
-        </div>
-        
+        <h1 className="text-3xl font-bold">Expenses</h1>
+        <p className="mt-1 text-sm text-gray-600">Powered by TanStack Query</p>
+        <AddExpenseForm />
+        <ExpensesList />
         <AppCard />
       </div>
     </main>
